@@ -2,3 +2,5 @@
 *.log
 config.json
 *.pyc
+ansible/inventory
+tags.properties

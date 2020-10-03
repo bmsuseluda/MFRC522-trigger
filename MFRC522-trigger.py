@@ -3,7 +3,7 @@
 
 import pirc522
 import sys
-import os
+from os import path
 import urllib.request
 import subprocess
 import time
@@ -13,8 +13,9 @@ import logging.config
 import logging.handlers
 from enum import Enum, unique
 
-logging.config.fileConfig(os.path.dirname(__file__) + '/logging.ini')
-config = json.load(open(os.path.dirname(__file__) + '/config.json', encoding="utf-8"))
+pathname = path.dirname(path.abspath(__file__))
+logging.config.fileConfig(pathname + '/logging.ini')
+config = json.load(open(pathname + '/config.json', encoding="utf-8"))
 
 
 @unique
